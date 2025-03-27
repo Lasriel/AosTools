@@ -4,7 +4,7 @@
   
   A command line tools for extracting data from, and repacking data back to .aos archives.
 
-  &nbsp;<img src="https://img.shields.io/badge/dotnet-3.1.426-purple" />
+  &nbsp;<img src="https://img.shields.io/badge/dotnet-8.0.302-purple" />
 </div>
 
 

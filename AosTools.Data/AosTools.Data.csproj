@@ -5,8 +5,13 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
   </PropertyGroup>
 
 </Project>

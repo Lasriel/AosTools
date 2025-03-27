@@ -18,6 +18,9 @@ namespace AosTools {
                 return;
             }
 
+            // Adds access to missing text encodings
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
             try {
                 string command = args[0].ToLower();
                 switch (command) {

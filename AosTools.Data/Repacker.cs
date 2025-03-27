@@ -87,7 +87,7 @@ namespace AosTools.Data {
             hdr.dataOffset = AOSHEADER.k_HeaderBytes + hdr.indexSize;
 
             hdr.archiveName = new byte[AOSHEADER.k_ArchiveNameBytes];
-            byte[] nameBytes = Encoding.ASCII.GetBytes(fileName);
+            byte[] nameBytes = DataUtility.ConvertFileName(fileName);
             for (int i = 0; i < nameBytes.Length; i++) {
                 hdr.archiveName[i] = nameBytes[i];
             }
@@ -143,7 +143,7 @@ namespace AosTools.Data {
 
                 // Update entry struct file name
                 entries[i].fileName = new byte[AOSENTRY.k_EntryNameBytes];
-                byte[] nameBytes = Encoding.ASCII.GetBytes(fileName);
+                byte[] nameBytes = DataUtility.ConvertFileName(fileName);
                 for (int j = 0; j < nameBytes.Length; j++) {
                     entries[i].fileName[j] = nameBytes[j];
                 }
